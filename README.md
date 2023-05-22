@@ -1,6 +1,7 @@
 # McRonald's - gastronomy.kiosk.system with Spring
 
-##Photos
+## Photos
+
 ![Screenshot](./images/McRonlad's-gh1.png)
 ![Screenshot](./images/McRonlad's-gh2.png)
 ![Screenshot](./images/McRonald's - gh3.png)
