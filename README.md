@@ -16,6 +16,9 @@
 ## General info
 Work on the project is still in progress!
 
+I would like to primarily focus on the backend aspect of the project as it aligns with initial goal of my learning path and advancing in that direction. The frontend part will serve as an opportunity to explore, learn, and understand the utilization of frontend technologies and their underlying principles. Frontend layer will serve as a solid foundation for GUI, UX, and create capabilities to enhance the graphical and interactive aspects, allowing for comprehensive testing of the application's correct operation.
+
+## Project info
 The McRonald's Gastronomy Kiosk System is a project designed to manage orders accepted outside the main cash register in devices located on the premises of the catering establishment. This system draws inspiration from one of the world leaders in the fast-food industry.
 
 By employing McRonald's Gastronomy Kiosk System, customers can conveniently place orders via self-service kiosks, increasing the efficiency and accuracy of the ordering process.
