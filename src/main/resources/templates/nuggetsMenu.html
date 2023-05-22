@@ -1,0 +1,209 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--  <title>McRonald's Desserts Menu</title>-->
+<!--  <style>-->
+<!--      body {-->
+<!--        margin: 0;-->
+<!--        padding: 0;-->
+<!--        font-family: Arial, sans-serif;-->
+<!--      }-->
+<!--      #container {-->
+<!--        display: flex;-->
+<!--        height: 100vh;-->
+<!--        width: 100%;-->
+<!--      }-->
+<!--      #image {-->
+<!--        flex: 1;-->
+<!--      }-->
+<!--      #menu {-->
+<!--        flex: 1;-->
+<!--        display: flex;-->
+<!--        flex-direction: column;-->
+<!--        justify-content: center;-->
+<!--        align-items: flex-start;-->
+<!--        padding-left: 20px;-->
+<!--      }-->
+<!--      #menu > ul {-->
+<!--        list-style: none;-->
+<!--        padding: 0;-->
+<!--        margin: 0;-->
+<!--      }-->
+<!--      #menu > ul > li {-->
+<!--        margin-bottom: 10px;-->
+<!--        width: 300px;-->
+<!--        height: 60px;-->
+<!--        background-color: #ffcc00;-->
+<!--        display: flex;-->
+<!--        align-items: center;-->
+<!--        justify-content: space-between;-->
+<!--        padding: 0 20px;-->
+<!--        font-size: 1.2rem;-->
+<!--      }-->
+<!--      #menu > ul > li > span {-->
+<!--        margin-right: 20px;-->
+<!--      }-->
+<!--      #menu > ul > li > form > button {-->
+<!--        border: none;-->
+<!--        background: none;-->
+<!--        font-size: 1.2rem;-->
+<!--        color: #000;-->
+<!--        cursor: pointer;-->
+<!--        padding: 0;-->
+<!--      }-->
+<!--      #menu > ul > li:hover {-->
+<!--        background-color: #ff9900;-->
+<!--      }-->
+<!--  </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="container">-->
+<!--  <div id="menu">-->
+<!--    <h1>Nuggets Menu</h1>-->
+<!--    <ul>-->
+<!--      <li th:each="nugget : ${nuggets}">-->
+<!--        <span th:text="${nugget.name}"></span>-->
+<!--        <form th:action="@{/addToCart}" th:object="${item}" method="post">-->
+<!--          <input type="hidden" name="id" th:value="${nugget.id}" />-->
+<!--          <input type="hidden" name="name" th:value="${nugget.name}" />-->
+<!--          <input type="hidden" name="price" th:value="${nugget.price}" />-->
+<!--          <button type="submit">Add to cart</button>-->
+<!--        </form>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--  <div id="image"></div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!--2.-->
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>McRonald's Nuggets Menu</title>
+  <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('MainBackground.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        #menu > h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #menu > ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Zmienione na 2 kolumny */
+            grid-gap: 20px; /* Dodane odstępy między elementami */
+        }
+        #menu > ul > li {
+            height: 100px;
+            background-color: #ffcc00;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            font-size: 1.2rem;
+        }
+        #menu > ul > li > div {
+            display: flex;
+            flex-direction: column;
+        }
+        #menu > ul > li > div > span {
+            margin-bottom: 10px;
+        }
+        #menu > ul > li > div > span.price {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        #menu > ul > li > button {
+            border: none;
+            background: none;
+            font-size: 1.2rem;
+            color: #000;
+            cursor: pointer;
+            padding: 0;
+        }
+        #menu > ul > li:hover {
+            background-color: #ff9900;
+        }
+        .notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="menu">
+  <h1>Nuggets Menu</h1>
+  <ul>
+    <li th:each="nugget : ${nuggets}">
+      <div>
+        <span th:text="${nugget.name}"></span>
+        <span class="price" th:text="'PLN ' + ${#numbers.formatDecimal(nugget.price,1,2)}"></span>
+      </div>
+      <form th:action="@{/cart}" method="POST" onsubmit="addToCart(event)">
+        <input type="hidden" name="id" th:value="${nugget.id}" />
+        <input type="hidden" name="name" th:value="${nugget.name}" />
+        <input type="hidden" name="price" th:value="${nugget.price}" />
+        <button type="submit">Add to cart</button>
+      </form>
+    </li>
+  </ul>
+</div>
+
+<div class="notification" id="notification">Nuggets has been properly added to cart</div>
+
+<script>
+    function addToCart(event) {
+        event.preventDefault();
+
+        const notification = document.getElementById('notification');
+        notification.style.display = 'block';
+        setTimeout(function() {
+            notification.style.display = 'none';
+        }, 350);
+
+        const formData = new FormData(event.target);
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '/cart', true);
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                console.log('Nuggets has been properly added to cart');
+            }
+        };
+        xhr.send(formData);
+    }
+</script>
+</body>
+</html>

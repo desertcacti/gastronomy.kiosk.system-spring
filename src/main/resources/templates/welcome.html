@@ -1,0 +1,196 @@
+<!-- 1. ŚRODEK BEZ ZDJĘCIA BACKGROUND -->
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--  <title>Welcome to McRonald's!</title>-->
+<!--  <style>-->
+<!--      body {-->
+<!--        margin: 0;-->
+<!--        padding: 0;-->
+<!--        font-family: Arial, sans-serif;-->
+<!--      }-->
+<!--css-->
+<!--Copy code-->
+<!--  #container {-->
+<!--    display: flex;-->
+<!--    height: 100vh;-->
+<!--    width: 100%;-->
+<!--  }-->
+
+<!--  #image {-->
+<!--    background-image: url("/McRonaldPicture.png");-->
+<!--    background-size: cover;-->
+<!--    flex: 1;-->
+<!--  }-->
+
+<!--#image1 {-->
+<!--  position: relative;-->
+<!--  flex: 1;-->
+<!--  background-image: url("/burger.png");-->
+<!--  background-size: cover;-->
+<!--}-->
+
+
+<!--&lt;!&ndash;#burger {&ndash;&gt;-->
+<!--&lt;!&ndash;  position: absolute;&ndash;&gt;-->
+<!--&lt;!&ndash;  bottom: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;  right: 0;&ndash;&gt;-->
+<!--&lt;!&ndash;  width: 50px;&ndash;&gt;-->
+<!--&lt;!&ndash;  height: 50px;&ndash;&gt;-->
+<!--&lt;!&ndash;  background-image: url("/static/burger.png");&ndash;&gt;-->
+<!--&lt;!&ndash;  background-size: cover;&ndash;&gt;-->
+<!--&lt;!&ndash;}&ndash;&gt;-->
+
+<!--  #menu {-->
+<!--    flex: 1;-->
+<!--    display: flex;-->
+<!--    flex-direction: column;-->
+<!--    justify-content: center;-->
+<!--    align-items: center;-->
+<!--  }-->
+
+<!--  #menu > ol {-->
+<!--    list-style: none;-->
+<!--    padding: 0;-->
+<!--    margin: 0;-->
+<!--  }-->
+
+<!--  #menu > ol > li {-->
+<!--    margin-bottom: 10px;-->
+<!--    width: 300px;-->
+<!--    height: 40px;-->
+<!--    background-color: #ffcc00;-->
+<!--    display: flex;-->
+<!--    align-items: center;-->
+<!--    justify-content: center;-->
+<!--    font-size: 1.2rem;-->
+<!--  }-->
+
+<!--  #menu > ol > li > a {-->
+<!--    text-decoration: none;-->
+<!--    color: #000;-->
+<!--  }-->
+
+<!--  #menu > ol > li:hover {-->
+<!--    background-color: #ff9900;-->
+<!--  }-->
+<!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="container">-->
+<!--  <div id="burger-image">-->
+<!--  <img src="/burger.png" alt="Burger" />-->
+<!--  <div id="image"></div>-->
+<!--  <div id="menu">-->
+
+<!--    <img th:src="@{/McRonaldPicture2.png}"/>-->
+<!--    <p>Choose from our delicious menu:</p>-->
+<!--    <ol>-->
+<!--      <li><a th:href="@{/burgersMenu}">Burgers</a></li>-->
+<!--      <li><a th:href="@{/wrapsMenu}">Wraps</a></li>-->
+<!--      <li><a th:href="@{/fries}">Fries</a></li>-->
+<!--      <li><a th:href="@{/nuggetsMenu}">Nuggets</a></li>-->
+<!--      <li><a th:href="@{/drinksMenu}">Drinks</a></li>-->
+<!--      <li><a th:href="@{/coffees}">Coffees</a></li>-->
+<!--      <li><a th:href="@{/desserts}">Desserts</a></li>-->
+<!--      <li><a th:href="@{/extras}">Extras</a></li>-->
+<!--      <li><a th:href="@{/two4you}">Two4You</a></li>-->
+<!--      <li><a th:href="@{/sets}">Sets</a></li>-->
+<!--      <li><a th:href="@{/special-offers}">Special Offers</a></li>-->
+<!--      <li><a th:href="@{/finalization}">Finalization</a></li>-->
+<!--      <li><a th:href="@{/exit}">Exit</a></li>-->
+<!--    </ol>-->
+
+<!--  </div>-->
+<!--</div>-->
+
+<!--</div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+<!-- 2.ŚRODEK ZE ZDJĘCIEM BACKGROUND burger.png -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Welcome to McRonald's!</title>
+  <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      #container {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        background-image: url("/MainBackground.png");
+        background-size: cover;
+      }
+
+      #menu {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        margin: auto;
+        max-width: 700px;
+      }
+
+      #menu > ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #menu > ol > li {
+        margin-bottom: 10px;
+        width: 300px;
+        height: 40px;
+        background-color: #ffcc00;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+      }
+
+      #menu > ol > li > a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      #menu > ol > li:hover {
+        background-color: #ff9900;
+      }
+  </style>
+</head>
+<body>
+<div id="container">
+  <div id="menu">
+    <img th:src="@{/Transparent.png}" />
+    <p>Choose from our delicious menu:</p>
+    <ol>
+      <li><a th:href="@{/burgersMenu}">Burgers</a></li>
+      <li><a th:href="@{/wrapsMenu}">Wraps</a></li>
+      <li><a th:href="@{/friesMenu}">Fries</a></li>
+      <li><a th:href="@{/nuggetsMenu}">Nuggets</a></li>
+      <li><a th:href="@{/drinksMenu}">Drinks</a></li>
+      <li><a th:href="@{/coffeesMenu}">Coffees</a></li>
+      <li><a th:href="@{/dessertsMenu}">Desserts</a></li>
+      <li><a th:href="@{/extrasMenu}">Extras</a></li>
+      <li><a th:href="@{/two4youMenu}">Two4You</a></li>
+      <li><a th:href="@{/setsMenu}">Sets</a></li>
+      <li><a th:href="@{/special-offersMenu}">Special Offers</a></li>
+      <li><a th:href="@{/finalization}">Finalization</a></li>
+      <li><a th:href="@{/exit}">Exit</a></li>
+    </ol>
+  </div>
+</div>
+</body>
+</html>
