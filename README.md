@@ -6,7 +6,7 @@
 
 ![Screenshot](./images/McRonlad's-gh2.png)
 
-![Screenshot](./images/McRonald's - gh3.png)
+![Screenshot](./images/McRonald's-gh3.png)
 
 ## Table of contents
 * [General info about project](#general-info)
