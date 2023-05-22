@@ -12,7 +12,7 @@ import lombok.*;
 public class Burger {
 
         @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        @GeneratedValue(strategy = GenerationType.IDEN  TITY)
         private Long id;
 
         private String name;
