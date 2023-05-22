@@ -12,7 +12,7 @@ By employing McRonald's Gastronomy Kiosk System, customers can conveniently plac
 
 With a user-friendly interface, the McRonald's food kiosk system aims to provide customers with a hassle-free and enjoyable ordering experience. This project is an example of the inspiration of fast-food industry leaders' commitment to innovation in customer service systems and creating the best possible satisfaction for their customers experience.
 	
-## Technologies
+## Technologies used
 Project is created with:
 - Java 11, 
 - Maven,
@@ -28,8 +28,8 @@ Project is created with:
 - Crud.
 	
 ## Setup
-1.Deploy the project in your programming environment.\
-2.Open a web browser and navigate to https://localhost:8080/ \
-3.Follow the on-screen instructions to proceed with the project.
+1. Deploy the project in your programming environment.\
+2. Open a web browser and navigate to https://localhost:8080/ \
+3. Follow the on-screen instructions to proceed with the project.
 
 
