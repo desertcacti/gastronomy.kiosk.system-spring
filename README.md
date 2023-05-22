@@ -21,7 +21,7 @@ I would like to primarily focus on the backend aspect of the project as it align
 ## Project info
 The McRonald's Gastronomy Kiosk System is a project designed to manage orders accepted outside the main cash register in devices located on the premises of the catering establishment. This system draws inspiration from one of the world leaders in the fast-food industry.
 
-By employing McRonald's Gastronomy Kiosk System, customers can conveniently place orders via self-service kiosks, increasing the efficiency and accuracy of the ordering process.
+By employing McRonald's Gastronomy Kiosk System customers can conveniently place orders via self-service kiosks, increasing the efficiency and accuracy of the ordering process.
 
 With a user-friendly interface, the McRonald's food kiosk system aims to provide customers with a hassle-free and enjoyable ordering experience. This project is an example of the inspiration of fast-food industry leaders' commitment to innovation in customer service systems and creating the best possible satisfaction for their customers experience.
 	
