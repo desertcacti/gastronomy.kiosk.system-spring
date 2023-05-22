@@ -28,8 +28,8 @@ Project is created with:
 - Crud.
 	
 ## Setup
-1. Deploy the project in your programming environment.\
-2. Open a web browser and navigate to https://localhost:8080/ \
+1. Deploy the project in your programming environment.
+2. Open a web browser and navigate to https://localhost:8080/ 
 3. Follow the on-screen instructions to proceed with the project.
 
 
