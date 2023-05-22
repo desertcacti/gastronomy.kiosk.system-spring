@@ -9,7 +9,8 @@
 ![Screenshot](./images/McRonald's-gh3.png)
 
 ## Table of contents
-* [General info about project](#general-info)
+* [General info](#general-info)
+* [Project info](#project-info)
 * [Technologies used](#technologies-used)
 * [Setup](#setup)
 
