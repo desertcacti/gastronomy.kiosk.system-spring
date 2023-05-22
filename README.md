@@ -1,4 +1,4 @@
-# McRonald's - gastronomy.kiosk.system with spring
+# McRonald's - gastronomy.kiosk.system with Spring
 
 ## Table of contents
 * [General info about project](#general-info)
