@@ -2,7 +2,7 @@
 
 ## Table of contents
 * [General info about project](#general-info)
-* [Technologies used](#technologies)
+* [Technologies used](#technologies-used)
 * [Setup](#setup)
 
 ## General info
