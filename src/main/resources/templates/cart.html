@@ -699,6 +699,103 @@
 <!--najlepszy/poprzendi po dostosowaniu do produktów-->
 
 
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--  <title>McRonald's Cart</title>-->
+<!--  <style>-->
+<!--        body {-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--            font-family: Arial, sans-serif;-->
+<!--        }-->
+<!--        #container {-->
+<!--            display: flex;-->
+<!--            height: 100vh;-->
+<!--            width: 100%;-->
+<!--        }-->
+<!--        #cart {-->
+<!--            flex: 1;-->
+<!--            display: flex;-->
+<!--            flex-direction: column;-->
+<!--            justify-content: center;-->
+<!--            align-items: center;-->
+<!--            padding: 20px;-->
+<!--        }-->
+<!--        #cart > h1 {-->
+<!--            margin-bottom: 20px;-->
+<!--        }-->
+<!--        #cart > table {-->
+<!--            border-collapse: collapse;-->
+<!--            width: 100%;-->
+<!--        }-->
+<!--        #cart > table > thead > tr > th {-->
+<!--            text-align: left;-->
+<!--            border-bottom: 1px solid #ddd;-->
+<!--            padding: 10px;-->
+<!--        }-->
+<!--        #cart > table > tbody > tr > td {-->
+<!--            border-bottom: 1px solid #ddd;-->
+<!--            padding: 10px;-->
+<!--        }-->
+<!--        #cart > table > tfoot > tr > th {-->
+<!--            text-align: right;-->
+<!--            border-top: 1px solid #ddd;-->
+<!--            padding: 10px;-->
+<!--        }-->
+<!--        #cart > form {-->
+<!--            margin-top: 20px;-->
+<!--            display: flex;-->
+<!--            justify-content: center;-->
+<!--        }-->
+<!--        #cart > form > button {-->
+<!--            margin-left: 20px;-->
+<!--            font-size: 1.2rem;-->
+<!--            cursor: pointer;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="container">-->
+<!--  <div id="cart">-->
+<!--    <h1>Cart</h1>-->
+<!--    <table>-->
+<!--      <thead>-->
+<!--      <tr>-->
+<!--        <th>Name</th>-->
+<!--        <th>Price</th>-->
+<!--        <th>Quantity</th>-->
+<!--        <th>Total</th>-->
+<!--      </tr>-->
+<!--      </thead>-->
+<!--      <tbody>-->
+<!--      <tr th:each="order : ${orders}">-->
+<!--        <td th:text="${order.productName}"></td>-->
+<!--        <td th:text="'PLN ' + ${#numbers.formatDecimal(order.productPrice, 1, 2)}"></td>-->
+<!--        <td th:text="${order.quantity}"></td>-->
+<!--        <td th:text="'PLN ' + ${#numbers.formatDecimal(order.productPrice * order.quantity, 1, 2)}"></td>-->
+<!--      </tr>-->
+<!--      </tbody>-->
+<!--      <tfoot>-->
+<!--      <tr>-->
+<!--        <th colspan="3">Total:</th>-->
+<!--        <th>-->
+<!--          <strong>-->
+<!--            <span th:text="'PLN ' + ${#numbers.formatDecimal(totalCartPrice, 1, 2)}"></span>-->
+<!--          </strong>-->
+<!--        </th>-->
+<!--      </tr>-->
+<!--      </tfoot>-->
+<!--    </table>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!--przerabiam-->
+
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -708,6 +805,9 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            background-image: url('MainBackground.png');
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         #container {
             display: flex;
@@ -721,6 +821,7 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
         }
         #cart > h1 {
             margin-bottom: 20px;
