@@ -1,21 +1,14 @@
 package pl.kondzik.gastronomy.kiosk.system.MenuController;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.kondzik.gastronomy.kiosk.system.Product.Burger;
 import pl.kondzik.gastronomy.kiosk.system.ProductRepositories.BurgerRepo;
-
-
 import java.util.List;
-
 @Controller
-//@RequestMapping("/burgersMenu")
 public class BurgersMenuController {
-
     private final BurgerRepo burgerRepo;
-
     @Autowired
     public BurgersMenuController(BurgerRepo burgerRepo) {
         this.burgerRepo = burgerRepo;
@@ -27,7 +20,6 @@ public class BurgersMenuController {
         model.addAttribute("burgers", burgers);
         return "burgersMenu";
     }
-
 }
 
 

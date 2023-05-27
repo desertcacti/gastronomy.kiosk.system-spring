@@ -1,12 +1,7 @@
 package pl.kondzik.gastronomy.kiosk.system.Order;
-
 import jakarta.persistence.*;
-import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
@@ -29,7 +24,6 @@ public class Order {
 
     public Order() {
     }
-
     public int getQuantity() {
         return quantity;
     }

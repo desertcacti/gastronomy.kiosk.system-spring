@@ -1,5 +1,4 @@
 package pl.kondzik.gastronomy.kiosk.system.MenuController;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,9 +12,7 @@ import java.util.List;
 @RequestMapping("/drinksMenu")
 @Controller
 public class DrinksMenuController {
-
     private final DrinkRepo drinkRepo;
-
     @Autowired
     public DrinksMenuController(DrinkRepo drinkRepo) {
         this.drinkRepo = drinkRepo;
