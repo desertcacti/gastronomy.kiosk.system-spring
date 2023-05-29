@@ -1,4 +1,4 @@
-# McRonald's - gastronomy.kiosk.system with Spring
+# McRonald's - gastronomy.kiosk.system with Spring-Thymeleaf
 
 ## View
 
