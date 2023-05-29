@@ -33,7 +33,6 @@ Project is created with:
 - Spring,
 - Spring Boot,
 - MVC model,
-- Rest architecture,
 - Lombok,
 - Thymeleaf,
 - H2 Database,
